@@ -1,0 +1,49 @@
+header {
+    background: #BBBBBB;
+}
+
+header div {
+    position: relative;
+    width: 940px;
+    margin: 0 auto;
+}
+
+header h1 img {
+    width: calc(50% - 300px);
+}
+
+/* com a propriedade calc podemos calcular o tamanho de determinado elemento e fazer operações de cálculo para facilitar na escolha de tamanho de determinado elemento */ 
+
+nav {
+    position: absolute;
+    right: 0;
+    top: 110px;
+}
+
+nav li {
+    display: inline;
+    margin: 0 0 0 15px;
+}
+
+
+td:nth-child(3n+0) {
+    background-color: orange;
+}
+
+
+
+nav a {
+    font-size: 22px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: black;
+}
+
+nav a:hover {
+    color: rgba(255, 68, 0, 0.39);
+    text-decoration: underline;
+}
+
+nav a:focus {
+    text-decoration: underline;
+}

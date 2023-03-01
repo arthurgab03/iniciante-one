@@ -1,0 +1,61 @@
+body {
+  background: #FFFFFF;
+ }
+
+ .titulo-principal {
+    padding-left: 20px;
+ }
+
+
+ #banner{
+    width: 100%;
+    
+ }
+
+ .principal{
+    background: #CCCCCC;
+    padding: 30px;
+    
+ }
+
+ .centralizado {
+    text-align: center;
+   
+}
+    p {
+    background: #CCCCCC;
+}
+
+#missao {
+    font-size: 25px;
+}
+
+em strong {
+    color: red;
+}
+
+.beneficios {
+    background: #FFFFFF;
+}
+
+h3 { text-align: center;}
+
+ul {
+  display: inline-block; /* conteudos que tem display block possuem sua linha com o tamanho 100% na página, é bom utilizar o inspecionador para verificar, é por isso que listas com display block possuem itens um abaixo do outro ao invés de um do lado do outro */
+  vertical-align: top;
+  width: 20%;
+  margin-right: 15%;
+  
+  
+    
+}
+
+.itens {
+    font-style: italic;
+}
+
+.imgbeneficios {
+    width: 50%;
+}
+
+

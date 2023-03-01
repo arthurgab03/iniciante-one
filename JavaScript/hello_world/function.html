@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        // estudo de funções 
+
+        function pulaLinha() {
+            document.write("<br>");
+            document.write("<br>");
+        };
+
+        function escrever() {
+            pulaLinha(); // utilizei uma função dentro de outra função.
+            var n1 = 2;
+            var n2 = 5;
+            document.write("o resultado da soma entre " + n1 + " e " + n2 + " é " + (n1 + n2));
+            pulaLinha()
+        }
+
+        function mostra(mensagem) {
+            document.write(mensagem);
+            pulaLinha();
+        }
+
+        mostra("testando a mensagem" ) // ao dar parametro para a função "mostra", estaremos dando valor a variavel "mensagem" que está contida na função, desse modo, a mensagem que escrevi acima vai aparecer no navegador. 
+
+
+
+
+        var puloLinha = "<br><br><br>" // seria essa forma realmente necessária? Será que existe alguma forma mais convencional? Sim! são as funções!, por questões de boas práticas, as funções são criadas no começo, por isso estarão mais acima.
+
+        document.write("oi " + puloLinha + "pulei as linhas");
+
+        pulaLinha();
+
+        document.write("testando, será que vai pular 2 linhas?");
+        pulaLinha();
+        document.write("outro teste... pulou");
+
+
+        escrever()
+
+
+
+
+        mostra()
+
+
+    </script>
+
+</body>
+
+</html>

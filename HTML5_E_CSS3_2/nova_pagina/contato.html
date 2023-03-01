@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./reset.css">
+    <link rel="stylesheet" href="./contato.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <title>Contato - Barbearia Alura </title>
+</head>
+
+<body>
+
+    <header>
+        <div class="caixa">
+            <h1> <img src="./imagens/logo.png"></h1>
+            <nav>
+                <ul>
+                    <li><a href="./index.html"> Home </a></li>
+                    <li><a href="./produtos.html"> Produtos </a></li>
+                    <li><a href="./contato.html"> Contato </a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <form>
+            <!-- a tag <label> funciona como uma etiqueta para os inputs, abaixo vemos o input de tipo texto recebendo sua etiqueta através do atributo "for" que indica para qual id o label vai referenciar-->
+            <label for="name"> Nome e sobrenome</label>
+            <input type="text" id="name" class="input-padrao" required>
+
+            <!-- required é uma palavra reservada que define o input como obrigatório-->
+
+            <label for="email"> E-mail</label>
+            <input type="email" id="email" class="input-padrao" placeholder="seuemail@gmail.com" required>
+
+            <label for="phone">Telefone</label>
+            <input type="tel" id="phone" class="input-padrao" placeholder="(XX) XXXXXXXXX" required>
+
+            <label for="message"> Mensagem </label>
+            <textarea cols="70" rows="10" id="message" class="input-padrao" required></textarea>
+            <!-- a tag <textarea> é uma espécie de formulário que utilizamos para receber textos de mais de uma linha dos usuários-->
+
+            <fieldset>
+                <legend> Como prefere o nosso contato? </legend>
+                <label for="radio-email"> <input type="radio" name="contato" value="email" id="radio-email"> E-mail
+                </label>
+
+
+                <label for="radio-phone"><input type="radio" name="contato" value="phone" id="radio-phone"> Telefone
+                </label>
+
+
+                <label for="radio-whats"> <input type="radio" name="contato" value="whats" id="radio-whats" checked>
+                    Whatsapp
+                </label>
+
+                <!-- o input radio é o input para marcar bolinha, para que marque apenas uma bolinha, é necessário colocar name de mesmo nome para os 3 radios-->
+
+            </fieldset>
+
+            <!-- a tag <fieldset> é uma tag semântica que se refere a parte do formulário com inputs e textos, o parágrafo de um fieldset se chama legend, a tag semântica que substitui o <p> de um fieldset é <legend>-->
+
+            <fieldset>
+
+                <legend> Qual horário prefere ser atendido?</legend>
+                <select>
+                    <option> Manhã</option>
+                    <option> Tarde</option>
+                    <option> Noite</option>
+                </select>
+            </fieldset>
+
+
+            <!-- checked é uma palavra reservada que utilizamos para deixar alguma checkbox ou radio específica já marcada, o usuario pode desmarcar-->
+
+            <label> <input type="checkbox" class="checkbox" checked> Gostaria de receber nossas novidades por e-mail?
+            </label>
+
+            <input type="submit" value="Enviar formulário" class="enviar">
+        </form>
+
+        <!-- os formulários são feitos dentro da tag <form>, o primeiro formulário é um input do tipo "text", esse tipo permite digitar no formulario.-->
+
+            <table>
+                <!-- as tabelas também são separadas por tags semãnticas que se referem ao header, body e footer das tabelas, são respectivamente thead, tbody e tfoot-->
+                <thead> 
+                <tr>
+                    <th>Dia</th>
+                    <th>Horário</th>
+                </tr>
+                <!-- a tag <th> é a célula td do cabeçalho da tabela (thead)-->
+            </thead>
+
+            <tbody> 
+                <tr>
+                    <td>Segunda</td>
+                    <td>8h ~ 20h</td>
+                </tr>
+                <tr>
+                    <td>Quarta</td>
+                    <td>8h ~ 20h</td>
+                </tr>
+                <tr>
+                    <td>Sexta</td>
+                    <td>8h ~ 20h</td>
+                </tr>
+            </tbody>
+
+            </table>
+
+
+    </main>
+
+    <footer>
+        <img src="./imagens/logo-branco.png">
+        <p class="copyright"> &#169; Barbearia Alura - 2022 </p>
+    </footer>
+
+</body>
+
+</html>

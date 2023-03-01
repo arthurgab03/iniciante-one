@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        // fixação de variáveis
+
+        var idadeJoao = 30;
+        // nota-se o uso de camelcase no nome das variáveis.
+        var idadeJoaquim = 20; // é convencional a não utilização de letras maiúsculas, números e caracteres especiais no começo da variável e não podemos utilizar nomes reservados do js (como var const por exemplo, isto não é permitido).
+
+        var idadeArthur = 20;
+
+        var media = (idadeJoao + idadeJoaquim + idadeArthur) / 3;
+
+        var nome = "Arthur";
+
+        document.write("A média das idades de João, Joaquim e Arthur é " + Math.round(media)); // o Math.round deixa o número arredondado, o resultado sem Math.round seria uma dízima.
+        document.write("<br>" + "A idade de " + nome + " é " + idadeArthur + ".");
+    </script>
+
+
+
+</body>
+
+</html>

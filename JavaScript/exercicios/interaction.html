@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interação com usuários </title>
+</head>
+<body>
+    <script>
+        var nome = prompt("informe o seu nome");
+        var altura = prompt(nome + ", informe a sua altura");
+        var peso = prompt(nome + ", informe o seu peso");
+
+        function calcularImc (peso, altura) {
+            return peso / (altura * altura)
+        }
+
+        var total = calcularImc(peso, altura);
+        document.write(nome + ", o seu IMC é " + total);
+    </script>
+    
+</body>
+</html>

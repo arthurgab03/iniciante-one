@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Implementando o canvas</title>
+</head>
+<body>
+        <canvas width="600" height="400"></canvas> <!-- esta tag trás uma "tela de desenho" para o nosso html.-->
+    <script>
+        var tela = document.querySelector("canvas"); 
+        var pincel = tela.getContext('2d'); // aqui indicamos que o tipo do conteúdo vai ser 2d. 
+
+
+        pincel.fillStyle = "lightgrey"; // fillStyle não é uma função, então precisamos dar atributos para ele. É com o fillStyle que definimos a cor do nosso "pincel", o fillStyle precisa vir antes do fillRect.
+        pincel.fillRect(0, 0, 600, 400); // fillRect é a implementação de um retângulo na tela, os dois primeiros valores são o posicionamento nos eixos x e y, os dois últimos valores são largura e altura. Os valores de largura e altura são de acordo com o tamanho do canvas, não tem como definir um retângulo de 1000 de largura se o canvas tiver apenas 500 de largura.
+
+        pincel.fillStyle = "green"; 
+        pincel.fillRect(0, 0, 200, 400);
+
+        pincel.fillStyle = "red"; 
+        pincel.fillRect(400, 0, 200, 400);
+
+        pincel.fillStyle = "yellow";
+        pincel.beginPath();
+        pincel.moveTo(300, 200);
+        pincel.lineTo(200, 400);
+        pincel.lineTo(400, 400)
+        pincel.fill();
+
+        pincel.fillStyle="blue";
+        pincel.beginPath();
+        pincel.arc(300, 200, 50, 0, 2 * 3.14);
+        pincel.fill();
+
+       
+       
+    </script>
+    
+</body>
+</html>

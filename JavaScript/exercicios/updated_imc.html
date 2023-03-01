@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> IMC atualizado </title>
+</head>
+<body>
+
+    <script>
+
+        var pesoInformado = parseFloat(prompt("digite o seu peso"));
+        var alturaInformada = parseFloat(prompt("digite a sua altura"))
+
+        var resultado = calculoImc(pesoInformado, alturaInformada)
+
+
+
+        function pulaLinha () {
+            document.write("<br>" + "<br>");
+        }
+
+        function mostra (frase) {
+            document.write(frase);
+        }
+
+        function calculoImc (peso, altura) {
+            return peso / (altura * altura);
+        }
+
+
+        if (resultado > 35) {
+            mostra("seu IMC é: " + resultado +  ", você está acima do índice de massa corporal ideal")
+        } else if (resultado < 18.5) {
+            mostra("seu IMC é " + resultado + ", seu IMC está abaixo do ideal")
+        } else if (resultado >= 18.5 && resultado <= 35) {
+            mostra("seu IMC é " + resultado + ", seu IMC está excelente!")
+        }
+
+
+    </script>
+    
+</body>
+</html>

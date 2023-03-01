@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Armazenando em Arrays</title>
+</head>
+<body>
+
+     <input>
+     <button> Adivinhe o segredo </button>
+
+    <script>
+       /*  var valores = [2, 4, 6, 8]; arrays são estruturados com colchetes, a posição dos itens dentro de um array começam a partir do zero, ou seja, o primeiro item está na posição 0.
+
+        console.log(valores[0])  dentro do console vemos que o elemento da posição 0 é o objeto 2. */
+
+
+       function sorteia(){
+        return Math.round(Math.random()*10);
+
+       }
+
+       function sorteiaValores (quantidade) {
+           var valores = [] // nota* variáveis declaradas dentro de uma função só valem dentro da função, exceto quando utilizo o return para puxar a variável.
+
+           var numero = 1;
+
+           while (numero <= quantidade){
+            var numeroAleatorio = sorteia();
+            var achou = false;
+            for (var posicao = 0; posicao < valores.length; posicao++) {
+                if(valores[posicao] == numeroAleatorio) {
+                    achou = true;
+                    break;
+                }
+            }
+
+            if (achou = false) { 
+            valores.push(numeroAleatorio());
+            numero++;}
+           }
+
+           return valores
+       }
+
+       // var valores = [] array vazio.
+
+       var valores = sorteiaValores(5)
+
+    
+
+       console.log(valores)
+
+        var input = document.querySelector("input");
+        var botao = document.querySelector("button");
+
+        botao.onclick = verifica;
+        input.focus();
+
+        function verifica () {
+
+            var achou = false;
+            for(var posicao = 0; posicao < valores.length; posicao++) {
+                if (input.value == valores[posicao]) {
+                    alert("você acertou!");
+                    achou = true;
+                    break;
+                } 
+            } 
+
+            if (achou == false) { 
+            alert ("você errou!")
+             }
+             input.value="";
+            input.focus();
+        }
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,255 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    /* este atributo faz com que TODAS os textos do body utilizem a fonte externa 'Montserrat'*/
+
+
+}
+
+header {
+    background: #BBBBBB;
+    padding: 20px 0;
+}
+
+.caixa {
+    width: 940px;
+    position: relative;
+    margin: 0 auto;
+}
+
+nav {
+    position: absolute;
+    top: 110px;
+    right: 0;
+}
+
+nav li {
+    display: inline;
+    margin: 0 0 0 15px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #000000;
+    text-transform: uppercase;
+    font-size: 22px;
+    font-weight: bold;
+    margin-left: 15px;
+
+}
+
+nav a:hover {
+    color: #c78c19;
+    text-decoration: underline;
+}
+
+nav a:active {
+    color: #088C19;
+}
+
+.banner {
+    width: 100%;
+
+}
+
+
+
+.titulo-principal {
+    text-align: center;
+    font-size: 2em;
+    /* em é a medida proporcional para pixels, 2em é 2x o tamanho padrão da fonte (15px), logo, ficamos com 30 pixels. */
+    margin: 0 0 1em;
+    /* como utilizamos 1em, o espaçamento para baixo será equivalente ao tamanho padrão da fonte (15px) */
+    clear: left;
+    /* clear é um atributo que limpa o float, colocamos o clear: left para corrigir o h3 afetado abaixo do float, com o clear este h3 voltou a sua posição normal */
+
+
+}
+
+
+.utensilios {
+    width: 120px;
+    float: left;
+    /* float é um atributo que teoricamente "levanta" o elemento, os parágrafos próximos ao float ficarão em volta do elemento, colocamos o lado esquerdo para o float do elemento. */
+    margin: 0 20px 20px 0;
+}
+
+.principal {
+    background: #FEFEFE;
+    width: 940px;
+    margin: 0 auto;
+    padding: 3em 0;
+}
+
+.principal p {
+    margin: 0 0 1em;
+
+}
+
+.principal strong {
+    font-weight: bold
+}
+
+.principal em {
+    font-style: italic;
+}
+
+.mapa-conteudo {
+    width: 940px;
+    margin: 0 auto;
+}
+
+.mapa {
+    padding: 3em 0;
+    background: linear-gradient(#FEFEFE, #888888);
+
+}
+
+.mapa p {
+    margin: 0 0 2em;
+    text-align: center;
+}
+
+.beneficios {
+    padding: 3em 0;
+    background: #888888;
+}
+
+.conteudo-beneficios {
+    width: 640px;
+    margin: 0 auto;
+}
+
+.lista-beneficios {
+    display: inline-block;
+    width: 40%;
+    vertical-align: top;
+}
+
+.itens {
+    line-height: 1.5;
+    /* o atributo line-height aumenta a altura da linha, aqui coloquei 1.5 (um e meio) que é o equivalente ao tamanho da própria linha mais 50% de seu tamanho */
+}
+
+.itens:before {
+    content: "✭"
+}
+
+/* a pseudo-classe before permite colocar qualquer elemento visual ANTES do elemento html, o mesmo vale para o after (que aparece depois do elemento) */
+
+.itens:first-child {
+    font-weight: bold;
+}
+
+/* a pseudo-classe first-child se refere ao "primeiro item" da lista, já que existem 6 itens da lista com a mesma classe, first0-child será o primeiro, isso possibilita que apenas o primeiro item fique em negrito com font-weight: bold */
+
+/* também podemos escolher um elemento espécifico de um elemento com vários "filhos" para personalizar através da pseudo-classe nth-child(3), o número 3 está se referindo ao número do filho do elemento */
+
+.img-beneficios {
+    width: 60%;
+    opacity: 1; /* a opacidade varia de 0 a 1, 0 é sem opacidade e 1 é com a visualização total do elemento, colocamos 30% de opacidade (0.3) no hover de img-beneficios, e uma transição de 400 milisegundos para que a mudança fique suave ao passar o mouse por cima da imagem */
+    transition: 400ms;
+    box-shadow: 10px 10px 10px  #000000;
+}
+
+/* a propriedade box-shadow utiliza o eixo X e Y, em que podemos colocar o tamanho da sombra e sua cor, o terceiro elemento do box-shadow seria o blur e o quarto elemento seria a intensidade do elemento, é possível inserir mais de uma sombra ao separar por vírgula */
+
+.img-beneficios:hover {
+    opacity: 0.3;
+}
+
+.video {
+    width: 560px;
+    margin: 2em auto;
+}
+
+footer {
+    background-image: url(./imagens/bg.jpg);
+    padding: 40px 0;
+    text-align: center;
+}
+
+.copyright {
+    color: white;
+    font-size: 13px;
+    margin-top: 20px;
+}
+
+
+@media screen and (max-width: 480px) {
+
+   .caixa, .principal, .conteudo-beneficios, .mapa-conteudo, .video {
+    width: auto;
+   }
+
+   h1 {
+    text-align: center;
+   }
+
+   nav {
+    position: static;
+   }
+
+   .lista-beneficios, .img-beneficios {
+    width: 100%;
+   }
+
+   
+
+   
+}
+/* anotações importantes 
+
+
+- SELETORES ESPECÍFICOS: 
+
+podemos utilizar seletores específicos para não selecionar mais de uma tag indesejada, por exemplo: 
+
+main > p {
+}
+
+este tipo de seletor atinge apenas o p que é filho direto de main, exemplo: 
+
+<main>
+<p> alguma coisa </p>
+
+<section>
+<p> assunto </p>
+</section>
+
+</main>
+
+no exemplo anterior, apenas o primeiro <p> será selecionado por ser "filho" direto de main, enquanto o <p> dentro de section é filho de uma tag dentro de main, ou seja, não conta como filho direto de main 
+
+
+outro método de selecionar: 
+
+img + p {
+}
+
+neste exemplo, selecionamos o primeiro <p> que vem diretamente depois da tag <img>, exemplo: 
+
+<img>
+
+<p> a </p>
+
+<p> b </p>
+
+<p> c </p>
+
+
+o <p> que vai ser selecionado é apenas o primeiro após a <img>, para selecionar todos os 3 <p>, podemos utilizar o seguinte exemplo: 
+
+img ~ p {
+}
+
+com o ~ podemos selecionar todos os <p>
+
+podemos também excluir com seletores 
+
+.principal p:not(#missao) {
+}
+
+neste exemplo estamos selecionando todos os <p> EXCETO o <p> com id #missao
+
+
+*/

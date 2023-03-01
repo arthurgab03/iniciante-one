@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convertendo texto em números</title>
+</head>
+<body>
+    <script>
+
+        var vitorias = parseInt(prompt("Digite o número de vitórias"));
+        var empates = parseInt(prompt("Digite o número de empates"));
+
+        // o parseInt converte o texto para números inteiros, isso evita que uma possível concatenação aconteça.
+
+        var pontos = vitorias * 3 + empates
+
+        // 1 vitória vale 3 pontos, 1 empate vale 1 ponto.
+
+        function pulaLinha () {
+            document.write("<br>" + "<br>");
+        }
+
+        function mostra (frase) {
+            document.write(frase);
+        }
+
+
+        if (pontos > 50) {
+            mostra("Seu time atingou a quantidade de " + pontos + " pontos, está melhor do que no ano passado.");
+        } else if (pontos < 50 ){
+            mostra("Seu time atingiu a quantidade de " + pontos + " pontos, está pior do que no ano passado.");
+        } else {
+            mostra("Seu time está igual ao ano passado.");
+        }
+
+        // condicionais if, else if, else apresentam diferentes resultados dependendo do valor digitado.
+
+
+    </script>
+    
+</body>
+</html>

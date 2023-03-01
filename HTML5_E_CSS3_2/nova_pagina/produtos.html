@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./reset.css">
+    <link rel="stylesheet" href="./produtos.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <!-- o reset.css é um arquivo básico que serve para resetar as configurações padrões do navegador, é importante colocar o link para o reset.css ANTES do seu arquivo de estilização, para que o reset.css limpe apenas as configurações do navegador e não as do seu arquivo.-->
+    <title>Produtos - Barbearia Alura</title>
+</head>
+
+<body>
+
+    <header>
+        <div class="caixa">
+            <h1>
+                <img src="./imagens/logo.png" alt="logo da barbearia alura">
+            </h1>
+            <!-- colocamos a tag <img> dentro de <h1> para indicar que a imagem da logomarca é o "título principal" da página, é importante de maneira semãntica.-->
+
+            <nav>
+                <ul>
+                    <li> <a href="./index.html">Home</a> </li>
+                    <li> <a href="./prdutos.html">Produtos</a> </li>
+                    <li> <a href="./contato.html"> Contato</a> </li>
+                </ul>
+
+                <!-- utilizamos a tag <a> para fazer uma espécie de âncora, esta tag é responsável por armazenar os links de navegação do nosso site-->
+            </nav>
+
+            <!-- a tag <nav> é uma tag semântica para identificar a aba de navegação do site, que envolve listas com links, rotas e etc...-->
+        </div>
+    </header>
+
+    <main>
+
+        <ul class="produtos">
+            <li class="itens">
+                <h2>Cabelo</h2>
+                <img src="./imagens/cabelo.jpg">
+                <p class="description">Tesoura ou máquina, como o cliente preferir</p>
+                <p class="price"> R$ 25,00</p>
+            </li>
+            <li class="itens">
+                <h2>Barba</h2>
+                <img src="./imagens/barba.jpg">
+                <p class="description">Corte e desenho profissional de barba</p>
+                <p class="price"> R$ 20,00</p>
+            </li>
+            <li class="itens">
+                <h2>Cabelo + Barba</h2>
+                <img src="./imagens/cabelo+barba.jpg">
+                <p class="description">Pacote promocional completo de cabelo e barba</p>
+                <p class="price"> R$ 35,00</p>
+            </li>
+        </ul>
+
+    </main>
+    <!-- a tag <main> é uma tag semântica que define o conteúdo principal da página-->
+        <footer>
+            <img src="./imagens/logo-branco.png">
+            <p> &#169; Barbearia Alura - 2022 </p>
+            <!-- o código dentro da tag <p> é o símbolo do copyright, esses símbolos vem de uma linguagem chamada de unicode, é a linguagem dos caracteres especiais, esta não é a única maneira de chamar um caractere em unicode-->
+            
+        </footer>
+
+        <!-- a tag <footer> é uma tag semântica que determina o rodapé do site-->
+
+</body>
+
+</html>

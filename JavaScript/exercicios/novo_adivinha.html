@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Novo jogo de adivinhação </title>
+</head>
+<body>
+
+    <input >
+    <button> Compare com o meu segredo </button> <!-- também podemos utilizar o onClick através do próprio HTML da seguinte maneira: <button onClick = "verifica()"> </button>-->
+
+    <script>
+        var input = document.querySelector("input");
+        input.focus();
+        var segredo = Math.round(Math.random() * 10);
+        var botao = document.querySelector("button");
+        botao.onclick = verifica;
+
+
+        function verifica () {
+        if (input.value==segredo){
+            alert("Você acertou :D")
+        } else {
+            alert("você errou :(");
+        }
+        input.value = ""; // ao atribuir uma string vazia, a caixa ficará limpa qnd enviamos nossa resposta.
+        input.focus(); // ao atribuir focus() para o input, ele estará "aberto" para digitar mesmo depois de enviar a resposta.
+    }
+    
+    </script>
+    
+</body>
+</html>

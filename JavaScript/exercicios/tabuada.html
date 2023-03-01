@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabuada</title>
+</head>
+
+<body>
+
+    <script>
+        /* var multiplicador = 1;
+
+        
+
+        while (multiplicador <= 10) {
+            mostra(" 7 x "+multiplicador + " é igual a " + 7 * multiplicador + "<br>");
+            multiplicador = multiplicador + 1
+        } */
+
+        // o comentário acima mostra uma tabuada feita através do laço while, abaixo veremos uma versão mais enxuta feita com o laço for.
+
+        function mostra(frase) {
+            document.write(frase);
+        }
+
+        for (var multiplicador = 1; multiplicador <= 10; multiplicador++) //este ++ é uma forma de incrementar mais um 
+         {
+            mostra("10 x " + multiplicador + " = " + 10 * multiplicador + "<br>");
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo de adivinhação</title>
+</head>
+<body>
+
+    <script>
+
+       /*  var adivinha = parseInt(prompt("adivinhe o número"))
+        var numeroPensado = Math.round(Math.random() * adivinha) // deste modo, multiplicando pela variável adivinha teremos um número sorteado entre 0 e o número digitado no prompt.
+
+        if (adivinha == numeroPensado) {
+            mostra("Parabéns! Você acertou!")
+        } else if (adivinha => numeroPensado) {
+            mostra ("Seu número é maior que o número pensado")
+        }else {
+            mostra("Você errou! O número correto é " + numeroPensado)
+        } */ 
+
+
+        // a forma do jogo de adivinhação acima é bastante simplória, abaixo veremos uma versão com um número determinado de chutes para acertar o jogo.
+
+        function mostra (frase) {
+            document.write(frase);
+        }
+
+
+
+        var nivel = parseInt(prompt("De 0 a 100, escolha quantos números você deseja nesse jogo :)"));
+
+        var numeroPensado = parseInt(Math.round(Math.random()*nivel))
+        
+
+        for (tentativas = 1; tentativas <= 3; tentativas ++) {
+
+            var chute = parseInt(prompt("Agora tente advinhar o número escolhido. "));
+
+            if (chute==numeroPensado){
+                mostra("Tentativa de número " + tentativas + ": Você acertou! O número escolhido foi " + numeroPensado + "<br>" )
+                break; // o break força uma pausa no laço de repetição.
+            } else {
+                mostra("Tentativa de número " + tentativas + ": você errou... o número correto é " + numeroPensado + "<br>");
+            } 
+
+        }
+    </script>
+    
+</body>
+</html>
